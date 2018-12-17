@@ -391,3 +391,78 @@ a {
 	color: white;
 	background: #CA7C4E;
 }
+
+/* Partie contact search */
+
+body{
+	background-color: #ddd;
+}
+
+#contact_container{
+	width: 700px;
+	min-height: 900px;
+	margin: 100px auto;
+	padding: 50px;
+	border: 5px dashed  #CA7C4E;
+	background-color: #fff;
+}
+
+#contact_container  p {
+	position: relative;
+	color: #CA7C4E;
+	font-size: 20px;
+	background: #E3D6D6;	
+}
+
+#contact_container  p  a {
+	position: relative;
+	margin-left: 50px;
+	right: -322px;
+	top: -40px;
+	text-decoration: none;
+	padding: 2px;
+	border: 1px solid #CA7C4E;
+	border-radius: 10px;
+	cursor: pointer;
+	color: white;
+	background: #CA7C4E;
+}
+
+
+
+#contact_container input {
+	width: 400px;
+	position: relative;	
+}
+
+
+#content_search	{
+	padding: 20px;
+}
+
+.listed_images {
+	width: 50px;
+	height: 50px;
+	margin-left: 60px;
+	margin-top: 5px;
+	position: relative;
+	margin-right: 15px;
+}
+
+#content_search a {
+
+	text-decoration: none;
+	color: black;
+
+}
+
+.listcontact1 {
+	position: relative;
+	top: -20px;
+	font-size: 17px;
+}
+.listcontact2 {
+	position: relative;
+	top: -20px;
+	left: 15px;
+}						   
