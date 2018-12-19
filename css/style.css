@@ -1,10 +1,4 @@
-/*
-Author: W3layout
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
-*/
-/*--Reset code--*/
+/* Css Partie signup */
 body {
     background: url(https://superdevresources.com/wp-content/uploads/2015/12/blurred2.jpg) no-repeat center center fixed;
   	background-size: cover;
@@ -59,10 +53,7 @@ h1 {
     color: #fff;
      font-family: 'Josefin Sans', sans-serif;
 }
-/* .w3l-main{
-	width:45%;
-	margin: 0 auto;
-} */
+
 .form {
     width: 720px;
     margin: 0 auto;
@@ -283,7 +274,7 @@ left: 565px;
 	margin-bottom: 15px;
 }
 
-/* Partie Profile */
+/* Css Partie Profile */
 
 
 #profil_container{
@@ -303,10 +294,8 @@ a {
 }
 
 #profile{
-	/*! width: 300px; */
 	float: left;
 	margin: 20px;
-	/*! min-height: 600px; */
 	background: rgba(14, 14, 14, 0.54);
     border: 1px solid #fff;
 	border-radius: 3px;
