@@ -20,7 +20,7 @@ $connexion = $obj->getConnnexion();
 <body>
 <h1>Ajouter un nouveau profil</h1>
 	<div class="form">
-		<form action="#" method="post">	
+		<form action="profile.php" method="post">	
 			<div class="lastname">
 				<label class="titre">Nom</label>
 				<input type="text" name="Nom" placeholder="Votre Nom" required="">

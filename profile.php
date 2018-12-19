@@ -154,7 +154,7 @@ $personne_id = $connexion->lastInsertId();
     </head>
     <body>
         <div id="profil_container">
-            <p id="searchprofile"><a href="contact_search.php">Chercher</a></p>
+            <p id="searchprofile"><a href="contact_search.php">Chercher profil</a></p>
             <div id="profile">
                 <?php              
                     $personne = $obj->selectPersonneBYid($data);
