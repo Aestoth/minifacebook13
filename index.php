@@ -13,14 +13,17 @@ $connexion = $obj->getConnnexion();
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <!-- Meta tag Keywords -->
+
 <!-- css files -->
 <link href="css/style.css" rel="stylesheet" type="text/css" media="all"/>
-<!-- //css files -->
+<!-- css files -->
 </head>
 <body>
+<!-- Titre du form -->
 <h1>Ajouter un nouveau profil</h1>
+	<!-- Formulaire d'inscription -->
 	<div class="form">
-		<form action="#" method="post">	
+		<form action="profile.php" method="post">	
 			<div class="lastname">
 				<label class="titre">Nom</label>
 				<input type="text" name="Nom" placeholder="Votre Nom" required="">
@@ -71,14 +74,15 @@ $connexion = $obj->getConnnexion();
 				</div>
 			</div>
 				<div class="clear"></div>
+			 <!-- liste des utilisateur dans la base de donnée -->
 			<div id="friend_list">
 					<h2 class="white">En Relation Avec</h2>
 					<div id="friend_list_option">
 				<?php
 					$personne = $obj->selectAllPersonne();
 					foreach($personne as $key){
-						echo '<p><label name="'.$key->Prenom.'">'.$key->Prenom.' '.$key->Nom.'
-							<select id="select_option" name="'.$key->Prenom.'">
+						echo '<p><a href="profile.php?id='.$key->id.'"<label name="'.$key->Prenom.'">'.$key->Prenom.' '.$key->Nom.'</a>
+							<select id="select_option" name="relation['.$key->id.']">
 								<option default></option>
 								<option>ami</option>
 								<option>famille</option>
@@ -86,9 +90,7 @@ $connexion = $obj->getConnnexion();
 
 							</select>
 							</label></p>';
-					} 
-
-					//<input type="text" name="'.$key->Prenom.'">						
+					} 						
 				?>
 
 				</div>
