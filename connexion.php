@@ -23,8 +23,33 @@ class Connexion {
             echo 'N° : '.$e->getcode();
         }
     
-    }//la fin de constructor 
+    }
 
+    public function inscription() {
+
+        // insérer une personne
+        $this->insertPersonne($_POST["Nom"],$_POST["Prenom"],$_POST["PURL"],$_POST["Dnaissance"],$_POST["Statut"]);
+        $hobby = $_POST["hobby"];
+        $music = $_POST["music"];
+        $relation = $_POST["relation"];
+        $personne_id = $this->connexion->lastInsertId();
+        header('Location: profile.php?id='.$personne_id);
+
+        // insert into relation personne
+        foreach ($relation as $key=>$value) {
+            if($value !="") {
+            $this->relationPersonne($personne_id,$key,$value); 
+            }
+        }
+        //insert into relation Musique  
+        foreach ($music as $key => $value) {  
+            $this->RelationMusique($personne_id,$key);
+        }
+        //insert into relation Hobby
+        foreach ($hobby as $key => $value) {  
+            $this->RelationHobby($personne_id,$key);
+        }
+    }
 
     public function insertHobby(string $hobby) {
         try{
@@ -56,15 +81,7 @@ class Connexion {
              values (:Nom, :Prenom, :URL_Photo, :Date_Naissance, :Statut_couple)");
          $requete_prepare->execute(
             array('Nom' => "$nom", 'Prenom' => "$prenom", 'URL_Photo' => "$URL", 'Date_Naissance' => "$Date", 'Statut_couple' => "$Statut"));
-         /*
-           $requete_prepare->bindValue(":Nom",$nom);
-           $requete_prepare->bindValue(":Prenom",$prenom); 
-           $requete_prepare->bindValue(":URL_Photo",$URL); 
-           $requete_prepare->bindValue(":Date_Naissance",$Date); 
-           $requete_prepare->bindValue(":Statut_couple",$Statut); 
-
-           $requete_prepare->execute();
-        */
+         
     }
 
     public function RelationPersonne($personne_1, $personne_2,$type){
@@ -138,8 +155,6 @@ class Connexion {
             return $resultat;  
     }
 
-     //exercise 9 selectioner les personne qui aiment les musique 
-
     public function selectAllMusiqueById(int $id){
 
         $requete_prepare = $this->connexion->prepare(
@@ -205,10 +220,6 @@ class Connexion {
     }
 
 }
-
-
-
-
 ?>
 
 

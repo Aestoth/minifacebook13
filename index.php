@@ -53,6 +53,7 @@ $connexion = $obj->getConnnexion();
 						<option value="non défini">Non défini</option>
 					</select>
 			</div>
+			<!-- Préférences personnelles de l'utilisateur -->
 			<div class="clear"></div>
 				<div class="musicdetail">					
 					<label class="titre">Musiques Préférées</label>
@@ -86,7 +87,7 @@ $connexion = $obj->getConnnexion();
 								<option default></option>
 								<option>ami</option>
 								<option>famille</option>
-								<option>collège</option>
+								<option>collègue</option>
 
 							</select>
 							</label></p>';
@@ -95,8 +96,8 @@ $connexion = $obj->getConnnexion();
 
 				</div>
 					</fieldset>
-					<input id="register_button" type="submit"  value="Enregistrer">
-					<input id="cancel_button" type="reset"  value="Anuler">				
+					<input id="cancel_button" type="reset"  value="Annuler" onclick="location.href='contact_search.php'">	
+					<input id="register_button" type="submit"  value="Enregistrer">			
 			<div class="clear"></div>
 		</form>
 	</div>

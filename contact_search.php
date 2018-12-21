@@ -22,7 +22,7 @@ $data = "";
 <body>
     <div id="contact_container">
         <p id="contactlist">Liste de contact <a href="signup.php"> Create a profile</a></p>
-        
+        <br>
         <form action="contact_search.php" method="GET">
             
             <input type="text" name="Nom" placeholder="Chercher un profil" required>
@@ -47,16 +47,6 @@ $data = "";
 
         </div>
 
-
-
-        <!--
-
-        <p class="userlist"><img class="listed_images" src="user.png" alt="" srcset=""><span class="listcontact1">Vincent berset</span><span class="listcontact2">ami</span> </p>
-        <p class="userlist"><img class="listed_images" src="user.png" alt="" srcset=""><span class="listcontact1">Vincent berset</span><span class="listcontact2">ami</span> </p>
-        <p class="userlist"><img class="listed_images" src="user.png" alt="" srcset=""><span class="listcontact1">Vincent berset</span><span class="listcontact2">ami</span> </p>
-        <p class="userlist"><img class="listed_images" src="user.png" alt="" srcset=""><span class="listcontact1">Vincent berset</span><span class="listcontact2">ami</span> </p>
-
-        -->
 
     </div>
 </body>
